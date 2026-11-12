@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clarence Provenaz · Microengineering, robotics</title>
+  <meta name="description" content="Clarence Provenaz: EPFL microengineering graduate, MSc student in Robotics, Systems and Control at ETH Zurich. Projects, education and experience.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=54">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="wordmark" href="#top">C. Provenaz</a>
+      <nav aria-label="Sections">
+        <ul>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Title block: the page opens like the corner of an engineering drawing -->
+    <section class="wrap intro" id="top" aria-labelledby="name">
+      <div class="title-block">
+        <figure class="tb-photo">
+          <img src="assets/photo.jpg" width="900" height="1200" alt="Portrait of Clarence Provenaz">
+        </figure>
+
+        <div class="tb-name">
+          <h1 id="name">Clarence Provenaz</h1>
+          <p class="role">Robotics, Systems and Control master's</p>
+          <ul class="affiliations" aria-label="Affiliations">
+            <li><img src="assets/logos/eth-zurich.svg" alt="ETH Zurich" width="192" height="32"></li>
+            <li><img src="assets/logos/ethrc.png" alt="ETH Robotics Club" width="586" height="120"></li>
+            <li><img src="assets/logos/epfl.svg" alt="EPFL" width="182" height="53"></li>
+          </ul>
+          <div class="actions">
+            <a class="btn btn-primary" href="mailto:clarence.provenaz@gmail.com">Email me</a>
+            <a class="btn btn-ghost" href="CV.pdf" download>Download CV (PDF)</a>
+          </div>
+        </div>
+
+        <dl class="tb-fields">
+          <div><dt class="visually-hidden">Based in</dt><dd><span aria-hidden="true">📍</span> Zurich, Switzerland</dd></div>
+          <div><dt class="visually-hidden">Citizenship</dt><dd>French, Canadian, Swiss (pending)</dd></div>
+          <div class="span-2"><dt>Contact</dt><dd><a href="mailto:clarence.provenaz@gmail.com">clarence.provenaz@gmail.com</a></dd></div>
+          <div class="span-4"><dt>Education</dt>
+            <dd>
+              <ul class="edu-rows">
+                <li><span class="edu-what"><strong>ETH Zurich:</strong> MSc Robotics, Systems and Control</span><span class="edu-when num">2026 – now</span></li>
+                <li><span class="edu-what"><strong>Institute of Science Tokyo:</strong> Exchange year</span><span class="edu-when num">2025 – 2026</span></li>
+                <li><span class="edu-what"><strong>EPFL:</strong> BSc Microengineering</span><span class="edu-when num">2023 – 2026</span></li>
+              </ul>
+            </dd>
+          </div>
+          <div class="span-3"><dt>Languages</dt><dd>French (native), English (C1), German (B2), Chinese (conversational), Japanese (learning)</dd></div>
+          <div><dt>Updated</dt><dd class="num">11.2026</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="wrap block" id="projects" aria-labelledby="projects-h">
+      <div class="projects-head">
+        <h2 id="projects-h">Projects</h2>
+        <ul class="origins" aria-label="Filter projects by origin">
+          <li><button type="button" class="origin" data-origin="eth" data-label="ETH Zurich" aria-pressed="false"><img src="assets/logos/eth-zurich.svg" alt="ETH Zurich" width="192" height="32"></button></li>
+          <li><button type="button" class="origin" data-origin="epfl" data-label="EPFL" aria-pressed="false"><img src="assets/logos/epfl.svg" alt="EPFL" width="182" height="53"></button></li>
+          <li><button type="button" class="origin" data-origin="personal" data-label="Personal projects" aria-pressed="false"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Personal</button></li>
+        </ul>
+      </div>
+      <p class="filter-status" aria-live="polite" hidden>
+        <span><span class="filter-prefix">Projects tagged</span> <strong></strong></span>
+        <button type="button" class="filter-clear">Show all</button>
+      </p>
+
+      <ul class="cards">
+        <li class="card" data-origin="eth" data-tags="CAD ReinforcementLearning ROS2">
+          <div class="card-img card-plate" aria-hidden="true"><span>EMG-based</span><span>upper-limb prosthesis</span><span>underactuated hand</span></div>
+          <div class="card-body">
+            <p class="card-meta"><span class="num">09.2026 – now</span><span class="status">In progress</span></p>
+            <h3><a class="card-link" href="brain-robot-interface.html">ETH Robotics Club</a></h3>
+            <p class="card-sum">Brain Robot Interface project: an EMG-based upper-limb prosthesis. Design and prototyping of the underactuated hand and its low-level control.</p>
+            <ul class="tags" aria-label="Skills used">
+            <li><button type="button" class="tag" data-tag="CAD">#CAD</button></li>
+            <li><button type="button" class="tag" data-tag="ReinforcementLearning">#ReinforcementLearning</button></li>
+            <li><button type="button" class="tag" data-tag="ROS2">#ROS2</button></li>
+            </ul>
+          </div>
+        </li>
+        <li class="card" data-origin="eth" data-tags="ReinforcementLearning">
+          <img class="card-img" src="assets/projects/in-hand-reorientation.jpg" alt="" width="555" height="874" loading="lazy" style="object-position:50% 60%">
+          <div class="card-body">
+            <p class="card-meta"><span class="num">2026</span></p>
+            <h3><a class="card-link" href="in-hand-reorientation.html">In-hand reorientation</a></h3>
+            <p class="card-sum">Reinforcement-learning policy that rotates a cube in a robotic hand, from Isaac Lab simulation to the real hand.</p>
+            <ul class="tags" aria-label="Skills used">
+            <li><button type="button" class="tag" data-tag="ReinforcementLearning">#ReinforcementLearning</button></li>
+            </ul>
+          </div>
+        </li>
+        <li class="card" data-origin="eth" data-tags="ImitationLearning">
+          <img class="card-img" src="assets/projects/color-based-sorting.jpg" alt="" width="897" height="412" loading="lazy" style="object-position:55% 50%">
+          <div class="card-body">
+            <p class="card-meta"><span class="num">2026</span><span class="status">In progress</span></p>
+            <h3><a class="card-link" href="color-based-sorting.html">Color-based sorting</a></h3>
+            <p class="card-sum">Imitation-learning policy that picks and places objects by color, trained from demonstrations and deployed on a real robot.</p>
+            <ul class="tags" aria-label="Skills used">
+            <li><button type="button" class="tag" data-tag="ImitationLearning">#ImitationLearning</button></li>
+            </ul>
+          </div>
+        </li>
+        <li class="card" data-origin="eth" data-tags="ReinforcementLearning ROS2 Python CAD">
+          <div class="card-img card-plate" aria-hidden="true"><span>ROS 2 Humble</span><span>PyTorch</span><span>Stable-Baselines3</span></div>
+          <div class="card-body">
+            <p class="card-meta"><span class="num">2026</span></p>
+            <h3><a class="card-link" href="warpdrive.html">Mr. Melon's Warpdrive</a></h3>
+            <p class="card-sum">Learned control of a pendulum on a reactor arm, in ROS 2 simulation. Course assignment, ETH Zurich.</p>
+            <ul class="tags" aria-label="Skills used">
+            <li><button type="button" class="tag" data-tag="ReinforcementLearning">#ReinforcementLearning</button></li>
+            <li><button type="button" class="tag" data-tag="ROS2">#ROS2</button></li>
+            <li><button type="button" class="tag" data-tag="Python">#Python</button></li>
+            <li><button type="button" class="tag" data-tag="CAD">#CAD</button></li>
+            </ul>
+          </div>
+        </li>
+        <li class="card" data-origin="personal" data-tags="CAD Machining">
+          <img class="card-img" src="assets/projects/cnc-frame.jpg" alt="" width="1600" height="1200" loading="lazy" style="object-position:50% 50%">
+          <div class="card-body">
+            <p class="card-meta"><span class="num">2022 – now</span><span class="status">In progress</span></p>
+            <h3><a class="card-link" href="cnc-router.html">CNC router</a></h3>
+            <p class="card-sum">Milling machine with a 1000 × 500 mm work area and a sub-0.1 mm precision target.</p>
+            <ul class="tags" aria-label="Skills used">
+            <li><button type="button" class="tag" data-tag="CAD">#CAD</button></li>
+            <li><button type="button" class="tag" data-tag="Machining">#Machining</button></li>
+            </ul>
+          </div>
+        </li>
+        <li class="card" data-origin="epfl" data-tags="CompliantMechanism CAD">
+          <img class="card-img" src="assets/projects/flyforce-cover.jpg" alt="" width="1600" height="1000" loading="lazy" style="object-fit:contain;background:#fff">
+          <div class="card-body">
+            <p class="card-meta"><span class="num">EPFL course project</span></p>
+            <h3><a class="card-link" href="flyforce.html">FlyForce</a></h3>
+            <p class="card-sum">Force sensor for a measuring probe, built only from flexure hinges and dynamically balanced. Designed on paper, not built.</p>
+            <ul class="tags" aria-label="Skills used">
+            <li><button type="button" class="tag" data-tag="CompliantMechanism">#CompliantMechanism</button></li>
+            <li><button type="button" class="tag" data-tag="CAD">#CAD</button></li>
+            </ul>
+          </div>
+        </li>
+        <li class="card" data-origin="epfl" data-tags="AVRAssembly">
+          <img class="card-img" src="assets/projects/vacuum-prototype.jpg" alt="" width="1417" height="1206" loading="lazy" style="object-position:50% 50%">
+          <div class="card-body">
+            <p class="card-meta"><span class="num">Spring 2025</span></p>
+            <h3><a class="card-link" href="vacuum-robot.html">Robot vacuum</a></h3>
+            <p class="card-sum">Drive and guidance of a robot vacuum that sweeps a rectangular room on its own, written entirely in assembly.</p>
+            <ul class="tags" aria-label="Skills used">
+            <li><button type="button" class="tag" data-tag="AVRAssembly">#AVRAssembly</button></li>
+            </ul>
+          </div>
+        </li>
+        <li class="card" data-origin="personal" data-tags="">
+          <img class="card-img" src="assets/projects/solar-plane.jpg" alt="" width="900" height="1200" loading="lazy" style="object-position:50% 55%">
+          <div class="card-body">
+            <p class="card-meta"><span class="num">2023</span></p>
+            <h3><a class="card-link" href="solar-airplane.html">Solar-powered RC airplane</a></h3>
+            <p class="card-sum">Radio-controlled plane powered by solar cells only, with no battery.</p>
+          </div>
+        </li>
+        <li class="card" data-origin="personal" data-tags="MotorControl">
+          <img class="card-img" src="assets/projects/drift-kart.jpg" alt="" width="675" height="1200" loading="lazy" style="object-position:50% 60%">
+          <div class="card-body">
+            <p class="card-meta"><span class="num">Personal project</span></p>
+            <h3><a class="card-link" href="drift-trike.html">Electric drift trike</a></h3>
+            <p class="card-sum">Drift trike built around reused hoverboard motors.</p>
+            <ul class="tags" aria-label="Skills used">
+            <li><button type="button" class="tag" data-tag="MotorControl">#MotorControl</button></li>
+            </ul>
+          </div>
+        </li>
+        <li class="card" data-origin="epfl" data-tags="CAD">
+          <img class="card-img" src="assets/projects/forest-winch.jpg" alt="" width="939" height="459" loading="lazy" style="object-fit:contain;background:#fff">
+          <div class="card-body">
+            <p class="card-meta"><span class="num">EPFL course project</span></p>
+            <h3><a class="card-link" href="forest-winch.html">Forest winch</a></h3>
+            <p class="card-sum">Hand-cranked winch for dragging logs out of a forest. Team of four.</p>
+            <ul class="tags" aria-label="Skills used">
+            <li><button type="button" class="tag" data-tag="CAD">#CAD</button></li>
+            </ul>
+          </div>
+        </li>
+        <li class="card" data-origin="personal" data-tags="PCBDesign CAD">
+          <img class="card-img" src="assets/projects/keyboard.jpg" alt="" width="1600" height="1204" loading="lazy" style="object-position:50% 50%">
+          <div class="card-body">
+            <p class="card-meta"><span class="num">2023</span></p>
+            <h3><a class="card-link" href="mechanical-keyboard.html">Mechanical keyboard</a></h3>
+            <p class="card-sum">Custom PCB, firmware and a 3D-printed case.</p>
+            <ul class="tags" aria-label="Skills used">
+            <li><button type="button" class="tag" data-tag="PCBDesign">#PCBDesign</button></li>
+            <li><button type="button" class="tag" data-tag="CAD">#CAD</button></li>
+            </ul>
+          </div>
+        </li>
+        <li class="card" data-origin="epfl" data-tags="FPGA">
+          <img class="card-img" src="assets/projects/alarm-clock-cover.jpg" alt="" width="640" height="400" loading="lazy" style="object-fit:contain;background:#fff">
+          <div class="card-body">
+            <p class="card-meta"><span class="num">EPFL course project</span></p>
+            <h3><a class="card-link" href="fpga-alarm-clock.html">FPGA alarm clock</a></h3>
+            <p class="card-sum">Alarm clock built from logic gates on an FPGA board, with two alarms, a stopwatch, a timer, a metronome and a music player.</p>
+            <ul class="tags" aria-label="Skills used">
+            <li><button type="button" class="tag" data-tag="FPGA">#FPGA</button></li>
+            </ul>
+          </div>
+        </li>
+        <li class="card" data-origin="personal" data-tags="CAD">
+          <div class="card-img card-plate" aria-hidden="true"><span>3D scanning</span><span>Rhino model</span><span>Interactive viewer</span></div>
+          <div class="card-body">
+            <p class="card-meta"><span class="num">06.2023 – 08.2023</span></p>
+            <h3><a class="card-link" href="haleon-site-digitalization.html">Site digitalization at Haleon</a></h3>
+            <p class="card-sum">3D scans of open spaces, false ceilings and a basement, plus a Rhino model of a building, combined in one viewer as a proof of concept. Summer job.</p>
+            <ul class="tags" aria-label="Skills used">
+            <li><button type="button" class="tag" data-tag="CAD">#CAD</button></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+
+      <div class="other-builds">
+        <h3>Other builds</h3>
+        <ul class="build-list">
+          <li>Guitar distortion pedals</li>
+          <li>Home automation and IoT</li>
+          <li>Bluetooth speaker</li>
+          <li>Arcade machine</li>
+          <li>Surfboard</li>
+          <li>Bicycle build</li>
+          <li>Camera repair</li>
+          <li>Woodworking</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="wrap block" id="experience" aria-labelledby="experience-h">
+      <h2 id="experience-h">Experience</h2>
+      <ol class="rows">
+        <li>
+          <p class="when num">09.2026 – now</p>
+          <div>
+            <h3>ETH Robotics Club</h3>
+            <p class="where">Hardware team, Brain Robot Interface project</p>
+            <ul class="facts">
+              <li>Developing an EMG-based upper-limb prosthesis</li>
+              <li>In charge of designing and prototyping the underactuated hand and its low-level control</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <p class="when num">09.2024 – 06.2025</p>
+          <div>
+            <h3>EPFL</h3>
+            <p class="where">Teaching assistant, Lausanne</p>
+            <ul class="facts">
+              <li>Exercise sessions in algebra, analysis, electrotechnics and mechanical construction</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <p class="when num">2024</p>
+          <div>
+            <h3>Swiss Solar Boat</h3>
+            <p class="where">Life cycle assessment team, EPFL student association</p>
+            <ul class="facts">
+              <li>Assessed the environmental impact of the team's solar-powered manned hydrofoil boat</li>
+              <li>The boat won its competition</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <p class="when num">06.2023 – 08.2023</p>
+          <div>
+            <h3>Haleon</h3>
+            <p class="where">Summer job, site digitalization</p>
+            <ul class="facts">
+              <li>3D scanned open spaces, false ceilings and a basement</li>
+              <li>Modelled a building in Rhino</li>
+              <li>Combined everything in an interactive 3D viewer, as a proof of concept for managing the infrastructure</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <p class="when num">2021 – 2023</p>
+          <div>
+            <h3>Cercle des nageurs de Nyon</h3>
+            <p class="where">Swim coach</p>
+            <ul class="facts">
+              <li>Taught children to swim</li>
+              <li>Supervised a group of swimmers with intellectual disabilities</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+
+      <ol class="rows rows-minor" aria-label="Other work and volunteering">
+        <li>
+          <p class="when num">08.2025</p>
+          <div>
+            <h3>Cap'tain Mousse</h3>
+            <p class="where">Delivery person: delivering beer to bars and customers</p>
+          </div>
+        </li>
+        <li>
+          <p class="when num">2023 – 2025</p>
+          <div>
+            <h3>Paléo Festival</h3>
+            <p class="where">Volunteer: site cleaning after the festival ends</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="wrap block" id="skills" aria-labelledby="skills-h">
+      <h2 id="skills-h">Skills</h2>
+      <dl class="skills">
+        <div><dt>CAD</dt><dd>CATIA, Fusion 360, Rhino<ul class="tags" aria-label="Show related projects"><li><button type="button" class="tag" data-tag="CAD">#CAD</button></li><li><button type="button" class="tag" data-tag="CompliantMechanism">#CompliantMechanism</button></li></ul></dd></div>
+        <div><dt>Programming</dt><dd>C++, Python, MATLAB, assembly<ul class="tags" aria-label="Show related projects"><li><button type="button" class="tag" data-tag="Python">#Python</button></li><li><button type="button" class="tag" data-tag="ROS2">#ROS2</button></li><li><button type="button" class="tag" data-tag="AVRAssembly">#AVRAssembly</button></li><li><button type="button" class="tag" data-tag="ReinforcementLearning">#ReinforcementLearning</button></li><li><button type="button" class="tag" data-tag="ImitationLearning">#ImitationLearning</button></li></ul></dd></div>
+        <div><dt>Electronics</dt><dd>PCB design, LTspice simulation, hand soldering<ul class="tags" aria-label="Show related projects"><li><button type="button" class="tag" data-tag="PCBDesign">#PCBDesign</button></li><li><button type="button" class="tag" data-tag="FPGA">#FPGA</button></li><li><button type="button" class="tag" data-tag="MotorControl">#MotorControl</button></li></ul></dd></div>
+        <div><dt>Fabrication</dt><dd>FDM printing (slicing, troubleshooting), machining, woodworking<ul class="tags" aria-label="Show related projects"><li><button type="button" class="tag" data-tag="Machining">#Machining</button></li></ul></dd></div>
+        <div><dt>Sport</dt><dd>Swimming (former national-level competitor), running, cycling</dd></div>
+        <div><dt>Music</dt><dd>Guitarist in a band, composing and recording</dd></div>
+      </dl>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="wrap footer-row">
+      <h2>Contact</h2>
+      <a class="mail" href="mailto:clarence.provenaz@gmail.com">clarence.provenaz@gmail.com</a>
+      <a class="btn btn-ghost-inv" href="CV.pdf" download>Download CV (PDF)</a>
+    </div>
+  </footer>
+  <script src="projects.js?v=54"></script>
+</body>
+</html>

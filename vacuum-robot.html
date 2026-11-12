@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Robot vacuum · Clarence Provenaz</title>
+  <meta name="description" content="Robot vacuum: drive and guidance of a robot that sweeps a rectangular room, written entirely in AVR assembly for an ATmega128L. EPFL Microcontrollers project.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=48">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="wordmark" href="index.html">C. Provenaz</a>
+      <nav aria-label="Sections">
+        <ul>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="index.html#experience">Experience</a></li>
+          <li><a href="index.html#skills">Skills</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap detail">
+    <a class="back" href="index.html#projects">Back to projects</a>
+
+    <header class="detail-head">
+      <p class="card-meta"><span class="num">Spring 2025</span></p>
+      <h1>Robot vacuum</h1>
+      
+    </header>
+
+    <dl class="specs detail-specs">
+          <div><dt>Context</dt><dd>Microcontrollers, EPFL (bachelor in microengineering), spring 2025</dd></div>
+          <div><dt>Team</dt><dd>2 students, with Yann Royer</dd></div>
+          <div><dt>Grade</dt><dd>6/6</dd></div>
+          <div><dt>Board</dt><dd>STK-300, ATmega128L</dd></div>
+          <div><dt>Language</dt><dd>AVR assembly</dd></div>
+    </dl>
+
+    <section aria-labelledby="media-h" class="detail-media">
+      <h2 id="media-h" class="visually-hidden">Images</h2>
+      <div class="media-grid">
+        <a href="assets/projects/vacuum-prototype.jpg"><img src="assets/projects/vacuum-prototype.jpg" width="1417" height="1206" alt="The prototype: STK-300 board with the ATmega128L and the LCD, the two servo-driven wheels and the 8×8 LED matrix" loading="lazy" style="background:#fff"></a>
+      </div>
+    </section>
+
+    <div class="detail-text">
+      <p>A robot vacuum that sweeps a rectangular room on its own, with all the code written in assembly for an ATmega128L. We were two students, and we built it for the Microcontrollers course at EPFL in spring 2025.</p>
+      <p>You put it in a corner facing the opposite wall. It drives straight until the infrared sensor sees a wall, then turns around with a sideways offset and starts the next lane. If there is a wall right after the offset, the room is done and it stops. The + and − buttons set the speed, shown on the LCD, and a pause button puts it to sleep. An 8×8 LED matrix shows its state with a face: asleep, happy, surprised or dead.</p>
+      <p>There is one module per peripheral (servos, IR sensor, buttons, LED matrix, LCD), all included from a main file. The buttons use the external interrupts INT0 to INT2, and the ADC raises an interrupt at the end of each conversion, so the program never waits for the sensor. Each face is 8 bytes in program memory, one bit per pixel, which a routine expands into colours for the 64 WS2812B LEDs.</p>
+      <p>The wheels are continuous-rotation servos, which need a 1 to 2 ms pulse every 20 ms. We wrote a library that cuts the 20 ms into ten 2 ms slots on a single 8-bit timer. That drives up to ten servos with one timer, with 128 steps over the useful range instead of about 12 with the built-in PWM. The final robot uses a simpler version on the 16-bit timer 1.</p>
+      <p>For a long time the servos wouldn't change speed even though the signal on the pin looked right. The problem wasn't the code: the STK-300 board couldn't power the servos and rebooted at every speed change. An external supply fixed it.</p>
+    </div>
+
+    <p class="detail-links">Made with <a href="https://yann-royer.github.io/Portfolio/" rel="noopener">Yann Royer</a></p>
+
+
+    <ul class="tags tags-static" aria-label="Skills used"><li><span class="tag-static">#AVRAssembly</span></li></ul>
+
+    <nav class="more" aria-label="Other projects">
+      <h2>Other projects</h2>
+      <ul><li><a href="brain-robot-interface.html">ETH Robotics Club</a></li><li><a href="in-hand-reorientation.html">In-hand reorientation</a></li><li><a href="color-based-sorting.html">Color-based sorting</a></li><li><a href="warpdrive.html">Mr. Melon's Warpdrive</a></li><li><a href="cnc-router.html">CNC router</a></li><li><a href="flyforce.html">FlyForce</a></li><li><a href="solar-airplane.html">Solar-powered RC airplane</a></li><li><a href="drift-trike.html">Electric drift trike</a></li><li><a href="forest-winch.html">Forest winch</a></li><li><a href="mechanical-keyboard.html">Mechanical keyboard</a></li><li><a href="fpga-alarm-clock.html">FPGA alarm clock</a></li><li><a href="haleon-site-digitalization.html">Site digitalization at Haleon</a></li></ul>
+    </nav>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="wrap footer-row">
+      <h2>Contact</h2>
+      <a class="mail" href="mailto:clarence.provenaz@gmail.com">clarence.provenaz@gmail.com</a>
+      <a class="btn btn-ghost-inv" href="CV.pdf" download>Download CV (PDF)</a>
+    </div>
+  </footer>
+</body>
+</html>

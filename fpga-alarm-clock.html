@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FPGA alarm clock · Clarence Provenaz</title>
+  <meta name="description" content="FPGA alarm clock: built from logic gates on a DE10-Lite board, with two alarms, a stopwatch, a timer, a metronome and a music player. EPFL Logic Systems project.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=48">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="wordmark" href="index.html">C. Provenaz</a>
+      <nav aria-label="Sections">
+        <ul>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="index.html#experience">Experience</a></li>
+          <li><a href="index.html#skills">Skills</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap detail">
+    <a class="back" href="index.html#projects">Back to projects</a>
+
+    <header class="detail-head">
+      <p class="card-meta"><span class="num">EPFL course project</span></p>
+      <h1>FPGA alarm clock</h1>
+      
+    </header>
+
+    <dl class="specs detail-specs">
+          <div><dt>Context</dt><dd>Logic Systems, EPFL (bachelor in microengineering)</dd></div>
+          <div><dt>Team</dt><dd>2 students, with Yann Royer</dd></div>
+          <div><dt>Grade</dt><dd>6/6</dd></div>
+          <div><dt>Board</dt><dd>DE10-Lite</dd></div>
+          <div><dt>Tools</dt><dd>Logisim</dd></div>
+    </dl>
+
+    <section aria-labelledby="media-h" class="detail-media">
+      <h2 id="media-h" class="visually-hidden">Images</h2>
+      <div class="media-grid">
+        <a href="assets/projects/alarm-clock-cover.jpg"><img src="assets/projects/alarm-clock-cover.jpg" width="640" height="400" alt="DE10-Lite FPGA board running the alarm clock, with labels in French" loading="lazy" style="background:#fff"></a>
+      </div>
+    </section>
+
+    <div class="detail-text">
+      <p>An alarm clock built from logic gates on a DE10-Lite FPGA board, with two alarms, a stopwatch, a timer, a metronome and a music player. We were two students, and we made it for the Logic Systems course at EPFL.</p>
+      <p>A menu button cycles through eight functions, and a rotary encoder with a built-in button sets the values, with the digit being set blinking. Each of the two alarms rings with a buzzer or one of three tunes. The metronome blinks an LED and beeps, and its tempo can be set with the encoder or by tapping it in.</p>
+      <p>Everything is drawn in Logisim from gates, flip-flops, counters and ROMs, then loaded onto the FPGA. A 16-state machine holds the eight functions and their menu entries. Each button goes through two D flip-flops in a row, which turns a press of any length into a pulse of exactly one clock tick. Hours, minutes and seconds are binary numbers, converted to decimal digits for the seven-segment displays with the Double Dabble algorithm.</p>
+      <p>The 24 notes over two octaves come from 24 clocks at different frequencies. Each tune is a ROM with one note per word, read by a counter running at the tempo of the tune. Converting between BPM and period needs a division, but Logisim's divider doesn't run on the FPGA and our own 16-bit divider was too large. Since the dividend is constant, we replaced it with a 256-entry lookup table.</p>
+    </div>
+
+    <p class="detail-links">Made with <a href="https://yann-royer.github.io/Portfolio/" rel="noopener">Yann Royer</a></p>
+
+
+    <ul class="tags tags-static" aria-label="Skills used"><li><span class="tag-static">#FPGA</span></li></ul>
+
+    <nav class="more" aria-label="Other projects">
+      <h2>Other projects</h2>
+      <ul><li><a href="brain-robot-interface.html">ETH Robotics Club</a></li><li><a href="in-hand-reorientation.html">In-hand reorientation</a></li><li><a href="color-based-sorting.html">Color-based sorting</a></li><li><a href="warpdrive.html">Mr. Melon's Warpdrive</a></li><li><a href="cnc-router.html">CNC router</a></li><li><a href="flyforce.html">FlyForce</a></li><li><a href="vacuum-robot.html">Robot vacuum</a></li><li><a href="solar-airplane.html">Solar-powered RC airplane</a></li><li><a href="drift-trike.html">Electric drift trike</a></li><li><a href="forest-winch.html">Forest winch</a></li><li><a href="mechanical-keyboard.html">Mechanical keyboard</a></li><li><a href="haleon-site-digitalization.html">Site digitalization at Haleon</a></li></ul>
+    </nav>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="wrap footer-row">
+      <h2>Contact</h2>
+      <a class="mail" href="mailto:clarence.provenaz@gmail.com">clarence.provenaz@gmail.com</a>
+      <a class="btn btn-ghost-inv" href="CV.pdf" download>Download CV (PDF)</a>
+    </div>
+  </footer>
+</body>
+</html>
